@@ -1,6 +1,13 @@
 # Survival Island Script Pack
 This pack contains all of the scripts that were used on the Survival Island server in Just Cause 3 Multiplayer. For questions, feel free to contact us on our [Discord](https://discord.gg/z9Q8KPJ).
 
+## Pack Overview
+- `packages`: All the packages that we used to run the server.
+- `packages_unfinished`: Packages that we were working on but did not fininsh.
+- `resources`: All resources (such as images and jQuery) that we used.
+
+### Make sure to read all the readmes for help with setting up and pack information.
+
 # FAQ
 
 ## Can I run my own server with these scripts?
