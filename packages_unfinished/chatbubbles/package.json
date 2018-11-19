@@ -1,0 +1,10 @@
+{
+    "name": "chatbubbles",
+    "author": "Paradigm",
+    "version": "1.0.0",
+    "jcmp_dependencies":
+    [
+        "chat2",
+        "timechange"
+    ]
+}

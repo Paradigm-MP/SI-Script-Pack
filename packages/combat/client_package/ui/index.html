@@ -1,0 +1,47 @@
+<html>
+    <title>Combat Log UI</title>
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <body>
+        <div class='container'>
+            <i class='fa fa-minus-circle'></i>
+        </div>
+    </body>
+    <style>
+    body
+    {
+        margin: 0;
+        position: fixed;
+        top: 85px;
+        right: 20px;
+        font-size: 60px;
+        /*animation: flash 1s ease-in-out infinite;*/
+        transform: translate(-100%, -100%);
+        user-select: none;
+    }
+
+    div.container {user-select: none;}
+
+    i.fa
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        user-select: none;
+        color: red;
+        text-shadow: 0px 0px 10px red;
+        
+    }
+
+    @keyframes flash
+    {
+        0% {opacity: 0;}
+        30% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+    </style>
+    <script>
+        jcmp.CallLocalEvent('combat/ui_ready');
+    </script>
+</html>

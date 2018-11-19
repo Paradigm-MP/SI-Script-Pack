@@ -1,0 +1,13 @@
+{
+  "name": "itemuse",
+  "author": "Paradigm",
+  "version": "1.0.0",
+  "jcmp_dependencies": [
+    "chat2",
+    "resource",
+    "character"
+  ],
+  "dependencies": {
+    "promise-mysql": "^3.2.1"
+  }
+}

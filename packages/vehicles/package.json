@@ -1,0 +1,16 @@
+{
+    "name": "vehicles",
+    "version": "1.0.0",
+    "author": "Paradigm",
+    "dependencies": 
+    {
+        "promise-mysql": "^3.0.1"
+    },
+    "jcmp_dependencies": 
+    [
+        "character",
+        "chat2",
+        "inventory",
+        "resource"
+    ]
+}

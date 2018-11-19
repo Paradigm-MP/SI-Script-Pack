@@ -1,0 +1,13 @@
+{
+    "name": "friends",
+    "author": "Paradigm",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "chat2",
+        "character",
+        "load"
+    ],
+    "dependencies": {
+        "promise-mysql": "^3.1.5"
+    }
+}

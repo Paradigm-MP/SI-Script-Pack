@@ -1,0 +1,9 @@
+{
+    "author": "Paradigm",
+    "name": "survival-hud",
+    "version": "1.0.0",
+    "jcmp_dependencies": 
+    [
+        "resource"
+    ]
+}

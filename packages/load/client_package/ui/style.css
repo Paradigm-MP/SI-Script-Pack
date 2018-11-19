@@ -1,0 +1,236 @@
+*
+{
+    user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: default;
+}
+
+img.palm
+{
+    position: fixed;
+    width: 20vh;
+    height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.gradient
+{
+    position: fixed;
+    background: linear-gradient(red, yellow);
+    width: 100%;
+    height: 100%;
+    clip-path: circle(12vh at center);
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+}
+
+div.gradient.cursed
+{
+    background: linear-gradient(rgba(40, 0, 0, 1), rgba(200, 0, 0, 1));
+}
+
+div.bg 
+{
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    vertical-align: middle;
+}
+
+div.bg.cursed
+{
+    background: linear-gradient(black, rgb(70, 0, 0) 60%, rgb(150, 0, 0));
+}
+
+div.loader 
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 3px solid rgba(0, 0, 0, 0);
+    border-top: 3px solid #262626;
+    border-bottom: 3px solid #262626;
+    border-radius: 500px;
+    width: calc(24vh - 6px);
+    height: calc(24vh - 6px); 
+    transform: translate(-50%, -50%);
+    animation: spin 3s linear infinite;
+}
+
+div.progress-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    width: 24vh;
+    height: 24vh;
+    transform: translate(-50%, -50%);
+}
+
+
+svg.progress
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28vh;
+    height: 28vh;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+svg.progress circle
+{
+    cx: 14vh;
+    cy: 14vh;
+    r: 12.45vh;
+    fill: none;
+    stroke-width: 1vh;
+}
+
+svg.progress circle.background
+{
+    stroke: #D9D19A;
+    opacity: 0.25;
+}
+
+svg.progress circle.fill
+{
+    stroke: #D9D19A;
+    stroke-dasharray: 78.226vh; /* --- 2 * pi * r --- */
+    stroke-dashoffset: 0; /* --- dasharray * (100-percent) --- */
+    transition: stroke-dashoffset 0.2s ease-in-out;
+}
+
+
+div.graphic
+{
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: shrink 0.75s ease-in-out 1;
+}
+
+@keyframes spin 
+{
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes shrink
+{
+    0% { transform: translate(-50%, -50%) scale(1); }
+    20% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(0); }
+}
+
+@keyframes grow
+{
+    0% { transform: translate(-50%, -50%) scale(0); }
+    80% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+div.tips
+{
+    width: 85%;
+    height: 25%;
+    font-size: 42px;
+    position: fixed;
+    color: #D9D19A;
+    display: flex;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+div.tips.cursed
+{
+    color: black;
+}
+
+div.tips>span
+{
+    text-align: center;
+}
+
+div.bar-loader
+{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 5%;
+    background: rgba(217, 209, 154, 0.5);
+    border-radius: 500px;
+    overflow: hidden;
+    display: none;
+}
+
+div.bar-loader>div.inside
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: #D9D19A;
+    transition: 1s ease-in-out transform;
+}
+
+div.bar-loader>div.inside-text
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #FF8000;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1), 0px 0px 8px rgba(0, 0, 0, 1);
+    font-size: 3.75vh;
+}
+
+
+/* Special rules for smaller screens 
+@media screen and (max-width: 1300px) 
+{
+    div.tips
+    {
+        font-size: 30px;
+    }
+
+    div.gradient
+    {
+        clip-path: circle(100px at center);
+    }
+
+    img.palm
+    {
+        width: 180px;
+        height: 180px;
+    }
+
+    div.loader
+    {
+        border-top: 10px solid #D9D19A;
+        border-bottom: 10px solid #D9D19A;
+        width: 198px;
+        height: 198px;
+    }
+}*/

@@ -1,0 +1,8 @@
+{
+  "name": "ingame2jpg",
+  "author": "Paradigm",
+  "version": "1.0.0",
+  "dependencies": {
+    "pureimage": "^0.1.3"
+  }
+}

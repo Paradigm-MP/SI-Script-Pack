@@ -1,0 +1,216 @@
+* 
+{
+	user-select: none;
+	font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+html
+{
+    visibility: hidden;
+}
+
+
+
+div.window
+{
+    position: fixed;
+    left: 30%;
+    top: 25%;
+    width: 30%;
+    height: 30%;
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+div.title
+{
+    position: relative;
+    width: 100%;
+    height: 15%;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-weight: bold;
+    font-size: 2vw;
+    border: 1.5px solid rgba(150, 150, 150, 1);
+}
+
+div.title-text
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.title-text:hover
+{
+    cursor: default;
+}
+
+div.entries
+{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 85%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1.5px solid rgba(150, 150, 150, 1);
+
+}
+
+div.marker-entry
+{
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 0.25vw;
+    text-align: left;
+    font-size: 1.25vw;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.75vw;
+    line-height: 1vw;
+    transition: background-color 0.2s linear, opacity 0.2s linear;
+}
+
+div.marker-entry:hover
+{
+    background: rgba(255, 255, 255, 0.25);
+    cursor: default;
+}
+
+span.entry-name
+{
+    margin-top: 4px;
+    display: inline-block;
+    height: 1.25vw;
+    vertical-align: middle;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+div.close-icon
+{
+    position: auto;
+    float: right;
+    right: 0;
+    top: 50%;
+    width: 1vw;
+    height: 1vw;
+    font-size: 1vw;
+    margin-right: 0.5vw;
+    margin-top: 0.5vw;
+    color: white;
+}
+
+span.icon
+{
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.25vw;
+    overflow-x: visible;
+    width: 1.75vw;
+    color: white;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+input
+{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25vw;
+    padding: 5px;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+i
+{
+    transition: color 0.2s linear;
+}
+
+i#icon-edit:hover
+{
+    color: #EBEB36;
+}
+
+i#icon-trash:hover
+{
+    color: #D92E2E;
+}
+
+i#icon-eye:hover
+{
+    color: #C255E0;
+}
+
+i#icon-eye-hidden:hover
+{
+    color: #C255E0;
+}
+
+i#icon-marker:hover
+{
+    color: #0099FF;
+}
+
+span.icon-plus
+{
+    margin: 15px;
+    display: inline-block;
+    float: right;
+    height: auto;
+    margin-top: 2%;
+    margin-right: 25px;
+    padding: 0.25vw;
+    text-align: left;
+    font-size: 1.25vw;
+    line-height: 1vw;
+    font-weight: bold;
+    overflow-x: visible;
+    width: 1vw;
+    color: white;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+i#icon-plus:hover
+{
+    color: #2FCC95;
+}
+
+div.tooltip
+{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    cursor: default;
+    padding: 7px;
+    text-align: center;
+    max-width: 10vw;
+    z-index: 9999;
+}

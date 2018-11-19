@@ -1,0 +1,11 @@
+{
+  "name": "backup",
+  "version": "1.0.0",
+  "author": "Paradigm",
+  "jcmp_dependencies": [
+    "character"
+  ],
+  "dependencies": {
+    "mysqldump": "^2.2.1"
+  }
+}

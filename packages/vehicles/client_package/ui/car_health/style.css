@@ -1,0 +1,57 @@
+
+* 
+{
+	user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400px;
+    cursor: default;
+    font-size: 16px;
+}
+
+html
+{
+    visibility: hidden;
+    color: white;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.container
+{
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+div.fill
+{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+div.name
+{
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: min-content;
+    line-height: 12px;
+    text-align: center;
+    transform: translateY(-50%);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}

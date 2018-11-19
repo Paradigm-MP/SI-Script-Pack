@@ -1,0 +1,11 @@
+{
+    "author": "Paradigm",
+    "name": "tutorial",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "character"
+    ],
+    "dependencies": {
+        "promise-mysql": "^3.3.1"
+    }
+}

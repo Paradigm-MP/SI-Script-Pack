@@ -1,0 +1,156 @@
+<html>
+    <body>
+        <div><span id="tag">Admin</span><span id="name">PlayerName</span>
+        <div class="lower-container"><span class='level'>Level 56</span><span class="friend"></span></div>
+    </div>
+    </body>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script>
+
+    let this_id = -1;
+
+
+
+    $(document).ready(function()
+    {
+
+        jcmp.AddEvent('nametags/updatetag', (id, name, color, level, tagname, tagcolor, friend) => {
+            if (this_id === -1)
+            {
+                jcmp.AddEvent('nametags/updatetag_' + id, (name, color, level, tagname, tagcolor, friend) => 
+                {
+                    UpdateTag(name, color, level, tagname, tagcolor, friend);
+                })
+
+                jcmp.AddEvent('nametags/update_level_' + id, (level) => 
+                {
+                    $("span.level").text(`Level ${level}`);
+                })
+
+                jcmp.AddEvent('nametags/update_friend_' + id, (friend) => 
+                {
+                    if (friend)
+                    {
+                        $("span.friend").text(' [Friend]');
+                    }
+                    else
+                    {
+                        $("span.friend").text('');
+                    }
+                })
+
+                this_id = id;
+
+            }
+
+            UpdateTag(name, color, level, tagname, tagcolor, friend);
+
+        })
+
+        function UpdateTag(name, color, level, tagname, tagcolor, friend)
+        {
+            $("#name").css("color", color);
+            $("#name").text(name);
+            //const name_div = document.getElementById('name');
+            //name_div.innerHTML = name;
+            //name_div.style.color = color;
+            if (tagname && tagcolor)
+            {
+                $("#tag").css("background-color", tagcolor);
+                $("#tag").text(tagname);
+                $("#tag").css("display", "inline");
+            }
+            else
+            {
+                $("#tag").remove();
+            }
+
+            if (level != undefined)
+            {
+                $("span.level").text(`Level ${level}`);
+            }
+
+
+            if (friend)
+            {
+                $("span.friend").text(' [Friend]');
+            }
+            else
+            {
+                $("span.friend").text('');
+            }
+        }
+
+        jcmp.CallLocalEvent('nametags/loadedtag');
+
+
+    });
+
+    </script>
+    <style>
+
+        div
+        {
+            font-family: 'Source Sans Pro', sans-serif;
+            position: fixed;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            color: white;
+            text-shadow: 2px 2px black, 3px 3px black, 4px 4px black;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            text-align: center;
+            user-select: none;
+        }
+
+        #tag
+        {
+            position: relative;
+            bottom: 2px;
+            height: 100%;
+            width: max-content;
+            padding-left: 24px;
+            padding-right: 24px;
+            background-color: gray;
+            border-radius: 50px;
+            margin-right: 8px;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        div.lower-container
+        {
+            font-family: 'Source Sans Pro', sans-serif;
+            position: fixed;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            top: calc(50% + 60px);
+            left: 50%;
+            color: white;
+            text-shadow: 2px 2px black, 3px 3px black, 4px 4px black;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: #FFD000;
+            text-align: center;
+            user-select: none;
+        }
+
+        span.level
+        {
+            color: #FFD000;
+        }
+
+        span.friend
+        {
+            color: #32C94E;
+        }
+
+
+    </style>
+</html>

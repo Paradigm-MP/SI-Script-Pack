@@ -1,0 +1,1 @@
+const ui = new WebUIWindow('keypress', 'package://keypress/ui/index.html', new Vector2(1,1));

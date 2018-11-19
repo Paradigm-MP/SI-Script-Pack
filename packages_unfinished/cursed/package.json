@@ -1,0 +1,9 @@
+{
+    "jcmp_dependencies": [
+        "chat2",
+        "resource"
+    ],
+    "name": "cursed",
+    "author": "Paradigm",
+    "version": "1.0.0"
+}

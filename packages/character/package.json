@@ -1,0 +1,15 @@
+{
+    "author": "Paradigm",
+    "name": "character",
+    "version": "1.0.0",
+    "dependencies": 
+    {
+        "promise-mysql": "^3.0.1"
+    },
+    "jcmp_dependencies": 
+    [
+        "chat2",
+        "resource",
+        "load"
+    ]
+}

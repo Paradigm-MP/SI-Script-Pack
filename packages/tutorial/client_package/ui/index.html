@@ -1,0 +1,456 @@
+<html>
+    <title>Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <body>
+        <div class='fader'></div>
+        <div class='container tu-1'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Hi, my name is <span class='devbot-color'>DevBot</span>.
+                        <br>I'm here to assist you in Survival Island.<br><br>
+                        I'm going to help you learn the basics and get started!
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease' id='start_tut'>Awesome!</div>
+            </div>
+        </div>
+        <div class='container tu-2 hidden'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        <b>Are you sure you don't want any help?</b>
+                        <br><br>
+                        This server is much different than others, so it might take a little while to figure everything out.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease' id='start_tut'>Show me around</div>
+                <div class='button nah' id='decline_tut2'>I don't need help</div>
+            </div>
+        </div>
+        <div class='container tu-3 hidden'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Okay, I understand! Have a nice day!
+                        <br><br>
+                        You can type <span style='color: yellow; font-weight: bold;'>/tutorial</span> to take the tutorial at a later time
+                        if you want.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button nah close' id='close'>Close <i class='fa fa-times'></i></div>
+            </div>
+        </div>
+        <div class='container tu-4 hidden' data-time='1000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        <b>Okay, let's get started!</b>
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue1'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-5 hidden' data-time='5000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        This server is all about <b>survival</b>, which means that your goal here is to survive.
+                        <br><br>
+                        To do this, you'll need to keep your hunger and thirst at bay, but also survive against other players.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue2'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-6 hidden' data-time='7000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        This is your <b>Survival HUD</b>. 
+                        <br><br>
+                        It shows useful information about your player, such as health, level, hunger, and thirst.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue3'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-7 hidden' data-time='3000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        You can hide or show this HUD by clicking the arrow in the top right.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue4'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-8 hidden' data-time='4000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Make sure you keep eating and drinking!
+                        <br><br>
+                        If your thirst or hunger reaches zero, you'll begin to lose health.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue5'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-9 hidden' data-time='6000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        This right here shows that you are in a <b>Safezone</b>. This means that you cannot be harmed while you are here.
+                        <br><br>
+                        Once you move out of this zone, this box will change.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue6'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-10 hidden' data-time='0'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Let me show you what I mean.
+                        <br><br>
+                        Please go to the location I marked for you.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='text-centered-bottom gray'><i>Move to the waypoint to continue</i></div>
+            </div>
+        </div>
+        <div class='container tu-11 hidden' data-time='6000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Excellent! See how the box changed from Safezone to Neutralzone?
+                        <br><br>
+                        This means that you are no longer fully safe. It's not really a warzone yet though...
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue7'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-12 hidden' data-time='9000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        The Neutralzone is a large, invisible area that surrounds the Safezone. You don't lose any items or exp if you die here.
+                        <br><br>
+                        It's a great place to start out and find loot. Speaking of which, let me introduce you to loot!
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue8'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-13 hidden' data-time='7000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Looting is a main part of the server. You can find lootboxes all over the place in towns and cities.
+                        <br><br>
+                        Lootboxes can contain all sorts of items, like food and water.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue9'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-14 hidden' data-time='4000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        That's enough of me talking about them, though.
+                        <br><br>
+                        Why don't you open one up for yourself and see what's inside?
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue10'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-15 hidden' data-time='0'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        I've spawned a lootbox at your feet to demonstrate.
+                        <br><br>
+                        To open it, just walk up to it and press <b>E</b> once you see an indicator. Once it's open, click the items inside to take them!
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='text-centered-bottom gray'><i>Take the items from the lootbox to continue</i></div>
+            </div>
+        </div>
+        <div class='container tu-16 hidden' data-time='5000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Excellent! You've opened your first lootbox and obtained new items and experience!
+                        <br><br>
+                        Looting is the main way to obtain items and survive here.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue11'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-17 hidden' data-time='0'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Let's check out those new items you just got.
+                        <br><br>
+                        Open your inventory with <b>G</b>.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='text-centered-bottom gray'><i>Open your inventory to continue</i></div>
+            </div>
+        </div>
+        <div class='container tu-18 hidden' data-time='9000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        This is your inventory. Here, you can see all the items you have with you.
+                        <br><br>
+                        You have limited space, though. The amount of items that you can carry per category increases as you level up.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue12'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-19 hidden' data-time='0'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Clicking on an item will use it or equip/unequip it.
+                        <br><br>
+                        Try clicking your Grapplehook to equip it.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='text-centered-bottom gray'><i>Equip your Grapplehook to continue</i></div>
+            </div>
+        </div>
+        <div class='container tu-20 hidden' data-time='2000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Nice! Now you can reach the rooftops where better loot is found.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue13'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-21 hidden' data-time='9000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Be careful, though. Your Grapplehook has limited durability, indicated by the bar at the bottom of the item.
+                        <br><br>
+                        Using your Grapplehook will decrease the durability. Once it hits zero, it'll break, and you'll have to find a new Grapplehook.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue14'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-22 hidden' data-time='2000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Let me talk a little bit more about loot, and then I'll let you go.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue15'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-23 hidden' data-time='5000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        There are three tiers of lootboxes.
+                        <br><br>
+                        You just looted a Tier 1, which is the lowest tier. You can find these on the ground and in corners.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue16'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-24 hidden' data-time='5000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Tier 2 lootboxes are a little more difficult to find, usually on the tops of buildings and sometimes on the ground.
+                        <br><br>
+                        These have better loot than Tier 1 boxes.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue17'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-25 hidden' data-time='5000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Tier 3 lootboxes are the best and most difficult to find.
+                        <br><br>
+                        They contain the best loot and give the most experience when opened.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue18'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-26 hidden' data-time='8000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        You can find examples of these lootboxes back in the Safezone.
+                        <br><br>
+                        Above those example boxes you'll also find lists of what items can be found in them.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue19'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-27 hidden' data-time='7000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Oh! One last thing.
+                        <br><br>
+                        Vehicles can be found all around, but you'll need Bavarium to buy and use them. You can find Bavarium in lootboxes.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue20'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-28 hidden' data-time='9000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Also: hotkeys to open all the menus can be found on the wall in the Safezone.
+                        <br><br>
+                        It's a good idea to check them out.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue21'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-29 hidden' data-time='3000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        Okay that's it from me! Go out there and conquer!
+                        <br><br>
+                        If you have any questions, ask around, or let us know in our Discord by pressing F4!
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button yesplease continue' id='continue22'>Continue <i class='fa fa-arrow-right'></i></div>
+            </div>
+        </div>
+        <div class='container tu-30 hidden' data-time='1000'>
+            <div class='top-container'>
+                <div class='img'><img class='devbot' src='devbot.png'></div>
+                <div class='top-text-container'>
+                    <div class='text-centered'>
+                        <b>Good luck!</b>
+                        <br><br>
+                        BTW: Type <span style='color: yellow; font-weight: bold;'>/tutorial</span> to retake the tutorial.
+                    </div>
+                </div>
+            </div>
+            <div class='bottom-container'>
+                <div class='button nah close' id='close2'>Close <i class='fa fa-times'></i></div>
+            </div>
+        </div>
+    </body>
+</html>

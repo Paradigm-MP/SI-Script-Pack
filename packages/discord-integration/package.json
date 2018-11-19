@@ -1,0 +1,10 @@
+{
+    "author": "UnknownMiscreant with edits from Paradigm",
+    "name":"discord-integration",
+    "version":"1.0.0",
+    "websites": [
+        "discord.gg",
+        "discordapp.com",
+        "*.discordapp.com"
+	]
+}

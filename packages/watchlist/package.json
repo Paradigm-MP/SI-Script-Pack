@@ -1,0 +1,13 @@
+{
+    "author": "Paradigm",
+    "name": "watchlist",
+    "version": "1.0.0",
+    "dependencies": 
+    {
+        "promise-mysql": "^3.0.1"
+    },
+    "jcmp_dependencies": 
+    [
+        "character"
+    ]
+}

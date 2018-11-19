@@ -1,0 +1,642 @@
+* 
+{
+	user-select: none;
+	font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+html
+{
+    visibility: hidden;
+    overflow: auto;
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+
+
+div.main-container
+{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%,-50%);
+    height: 22vh;
+    /*min-height: fit-content;*/
+}
+
+div.section
+{
+    top: 0;
+    position: relative;
+    margin: 1px;
+    vertical-align: bottom;
+    cursor: default;
+    text-align: center;
+    width: fit-content;
+    min-width: 12vw;
+    max-height: 22vh;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    display: inline-block;
+
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    padding-top: 0;
+}
+
+span.section-title
+{
+    width: 12vw;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.25), -2px -2px 15px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2px;
+}
+
+div.buttons
+{
+    position: absolute;
+    bottom: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    /*background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);*/
+}
+
+
+div.button
+{
+    padding: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: 0;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: 0.2s linear all;
+}
+
+div.button.check
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.button:hover {border-color: white;}
+div.button.close {background: rgba(150, 0, 0, 0.5);}
+div.button.check:hover {background: rgba(0, 150, 0, 0.5);}
+div.button.close:hover {background: rgba(255, 0, 0, 0.5);}
+
+div.section>div.item-container
+{
+    position: relative;
+    /*height: max-content;*/
+    max-height: 18vh;
+    width: 100%;
+    /*background-color: rgba(0, 255, 0, 0.2);*/
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div.item
+{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    transition: 0.2s linear border, 0.2s linear background-color, 0.2s linear color;
+}
+
+div.item:hover
+{
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+div.item:active {background-color: rgba(130, 130, 130, 0.5);}
+
+div.item.red {background: rgba(255, 0, 0, 0.5);}
+div.item.orange {background: rgba(255, 132, 0, 0.5);}
+div.item.lightblue {background: rgba(0, 255, 225, 0.5);}
+div.item.green {background: rgba(0, 240, 0, 0.5);}
+div.item.blue {background: rgba(0, 0, 240, 0.5);}
+div.item.pink {background: rgba(240, 103, 219, 0.5);}
+div.item.brown {background: rgba(163, 109, 39, 0.5);}
+div.item.uglyyellow {background: rgba(174, 135, 0, 0.75);}
+div.item.yellow {background: rgba(245, 224, 86, 0.5);}
+
+div.item.locked
+{
+    color: red;
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+div.item.locked i.fa
+{
+    font-size: 20px;
+    color: red;
+}
+
+div.item.dropping {border: 2px solid rgba(255, 0, 0, 1); color: rgba(255, 0, 0, 1);}
+div.item.dropping:hover {border: 2px solid rgba(255, 0, 0, 1); color: rgba(255, 0, 0, 1);}
+div.item.dropping>div.amount 
+{
+    border: 1px solid rgba(255, 0, 0, 1); 
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+div.item.dropping-chat {border: 2px solid rgba(0, 0, 255, 1); color: rgba(0, 0, 255, 1);}
+div.item.dropping-chat:hover {border: 2px solid rgba(0, 0, 255, 1); color: rgba(0, 0, 255, 1);}
+div.item.dropping-chat>div.amount 
+{
+    border: 1px solid rgba(0, 0, 255, 1); 
+    background-color: rgba(0, 0, 255, 0.25);
+}
+
+div.item>div.equipped
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+	height: 0;
+	border-top: 20px solid rgba(255, 255, 255, 0.8);
+	border-left: 20px solid transparent;
+}
+
+/* For when the equipped item of a stack is not on top */
+div.item>div.equipped.stacked 
+{
+    border-top: 20px solid rgba(255, 255, 255, 0.45);
+}
+
+div.item>div.amount
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2px;
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 500px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+div.item>div.durability
+{
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 0.6);
+}
+
+/*div.item.Common {background: rgba(217, 144, 85, 0.6);}
+div.item.Uncommon {background: rgba(119, 237, 59, 0.6);}
+div.item.Rare {background: rgba(59, 193, 237, 0.6);}
+div.item.Epic {background: rgba(231, 59, 237, 0.6);}
+div.item.Legendary {animation: legendary 10s infinite linear;}*/
+
+/* Special rules for smaller screens */
+@media screen and (max-width: 1400px) 
+{
+    div.item
+    {
+        font-size: 15px;
+    }
+
+    div.item>div.amount
+    {
+        font-size: 10px;
+        min-width: 12px;
+        left: 0;
+    }
+
+    span.slots
+    {
+        font-size: 12px;
+    }
+
+    span.section-title
+    {
+        font-size: 23px;
+    }
+
+    #lock
+    {
+        font-size: 14px;
+    }
+
+    div.tooltip
+    {
+        max-width: 40vw;
+    }
+    
+}
+
+div.durability>div.inner
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(220, 220, 220, 0.8);
+}
+
+div.tooltip
+{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    cursor: default;
+    padding: 7px;
+    text-align: center;
+    z-index: 9999;
+    font-size: 18px;
+    width: 12vw;
+}
+
+div.tooltip>span.title
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div.tooltip>span.title:not(:first-child)
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+div.tooltip>span.rarity {font-weight: bold;}
+
+div.tooltip>span.rarity.Common {color: #D99055;}
+div.tooltip>span.rarity.Uncommon {color: #77ED3B;}
+div.tooltip>span.rarity.Rare {color: #3BC1ED;}
+div.tooltip>span.rarity.Epic {color: #E73BED;}
+div.tooltip>span.rarity.Legendary {color: #FF3700;}
+
+
+i.fa.toggle-lock
+{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    color: white;
+    transition: 0.2s linear color;
+}
+
+
+hr.section
+{
+    margin: 0;
+    padding: 0px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, white, transparent);
+}
+
+hr.tooltip
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, white, transparent);
+}
+
+
+
+div.section ::-webkit-scrollbar,div.upgrade-entry-container::-webkit-scrollbar
+{
+    width: 0;
+    background-color: transparent;
+    transition: 0.2s linear width;
+}
+
+div.section ::-webkit-scrollbar-thumb,div.upgrade-entry-container::-webkit-scrollbar-thumb
+{
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-color: transparent;
+    transition: 0.2s linear width;
+}
+
+div.section:hover ::-webkit-scrollbar-thumb,div.upgrade-entry-container::-webkit-scrollbar-thumb
+{
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.section:hover ::-webkit-scrollbar,div.upgrade-entry-container::-webkit-scrollbar
+{
+    width: 10px;
+    transition: 0.2s linear width;
+}
+
+::-webkit-scrollbar-button 
+{
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner 
+{
+    background-color: transparent;
+}
+
+i.fa
+{
+    font-size: 30px;
+}
+
+div.access-container,div.keypad-container
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1vw;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transform: translateX(calc(100% + 10px));
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+div.keypad-container
+{
+    text-align: center;
+}
+
+div.access-title,div.keypad-title,div.upgrade-title
+{
+    font-weight: bold;
+    text-align: center;
+    margin: 4px;
+    border-bottom: 1px solid white;
+}
+
+div.access-entry
+{
+    padding: 2px;
+}
+
+div.access-entry:hover {background: rgba(0, 255, 0, 0.25);}
+div.access-entry.selected {background: rgba(0, 255, 0, 0.5); font-weight: bold;}
+
+span.circle
+{
+    display: inline-block;
+    width: 0.6vw;
+    height: 0.6vw;
+    border: 1px solid black;
+    border-radius: 500px;
+    margin-right: 4px;
+    margin-left: 2px;
+}
+
+span.circle.onlyme {background-color: orange;}
+span.circle.friends {background-color: #32C94E;}
+span.circle.everyone {background-color: yellow;}
+
+div.keypad-number
+{
+    display: inline-block;
+    line-height: 1vw;
+    width: 1vw;
+    height: 1vw;
+    border: 1px solid white;
+    padding: 3px;
+    margin: 2px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+div.keypad-number-container
+{
+    max-width: 7vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.keypad-number>i.fa
+{
+    font-size: 1vw;
+}
+
+div.keypad-enter
+{
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+    margin: 4px;
+    border: 2px solid white;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+div.keypad-number:hover,div.keypad-enter:hover
+{
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+div.keypad-number:active,div.keypad-enter:active
+{
+    background-color: #77ED3B;
+}
+
+div.keypad-input
+{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid white;
+    color: #77ED3B;
+    width: fit-content;
+    padding: 2px;
+    width: 4vw;
+    height: calc(1vw + 4px);
+    margin: 2px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+div.upgrade-container
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1vw;
+    min-width: 12vw;
+    min-height: 8vw;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transform: translateX(calc(-100% - 10px));
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+div.upgrade-entry-container
+{
+    max-height: 10vw;
+    overflow: auto;
+}
+
+div.upgrade-entry
+{
+    padding: 4px;
+    margin: 4px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid white;
+}
+
+div.upgrade-entry>i.fa
+{
+    visibility: hidden;
+    display: inline-block;
+    float: right;
+    font-size: 1vw;
+}
+
+div.upgrade-entry:hover>i.fa
+{
+    visibility: visible;
+}
+
+div.upgrade-entry>i.fa:hover
+{
+    color: red;
+}
+
+div.name-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    width: fit-content;
+    vertical-align: middle;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-50%,-50%);
+}
+
+div.name-area
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    width: fit-content;
+    vertical-align: middle;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-50%,-50%);
+}
+
+div.name-title
+{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+input
+{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    min-width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 50%;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: border 0.2s linear;
+}
+
+input:hover
+{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+input:focus
+{
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+button.name-submit
+{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 50%;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: border 0.2s linear, background-color 0.2s linear, opacity 0.2s linear;
+}
+
+button.name-submit.enabled:hover
+{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 200, 0, 0.35);
+}
+
+button.name-submit:focus
+{
+    outline: none;
+}
+
+button.name-submit.disabled
+{
+    opacity: 0.5;
+}
+
+button.name-submit.confirm:hover
+{
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 200, 0, 0.5);
+}

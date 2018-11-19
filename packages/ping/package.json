@@ -1,0 +1,9 @@
+{
+    "name": "ping",
+    "version": "1.0.0",
+    "author": "Paradigm",
+    "jcmp_dependencies":
+    [
+        "chat2"
+    ]
+}

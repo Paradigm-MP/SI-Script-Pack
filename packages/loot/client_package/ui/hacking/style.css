@@ -1,0 +1,173 @@
+* 
+{
+	user-select: none;
+	font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    cursor: default;
+}
+
+html
+{
+    visibility: hidden;
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s ease-in-out all;
+}
+
+div.info-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 5vh;
+    font-size: 2vh;
+    border: 2px solid white;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 30vh;
+}
+
+div.circle-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 1s ease-in-out all;
+}
+
+div.circle-container.small1
+{
+    transform: translate(-50%, -50%) scale(0.66);
+}
+
+div.circle-container.small2
+{
+    transform: translate(-50%, -50%) scale(0.33);
+}
+
+div.circle
+{
+    width: 70vh;
+    height: 70vh;
+    border-radius: 500px;
+    border: 7vh solid #3D3D3D;
+}
+
+div.dot
+{
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 500vh;
+    background: #00FF00;
+    top: 50%;
+    left: 50%;
+    filter: grayscale(75%);
+    opacity: 0.5;
+    transform: translate(-50%, -50%) rotate(45deg) translate(0, -35vh) translate(0, -50%);
+    box-shadow: inset -3vh 0 0 rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease-in-out transform, 0.2s ease-in-out filter, 0.2s ease-in-out opacity;
+}
+
+div.dot.enabled
+{
+    filter: none;
+    opacity: 1;
+}
+
+div.dot.controller
+{
+    animation: rotate 3s linear infinite;
+    z-index: 2;
+}
+
+div.dot.controller.reverse
+{
+    animation: rotate-reverse 3s linear infinite;
+}
+
+@keyframes rotate
+{
+    from {transform: translate(-50%, -50%) rotate(45deg) translate(0, -35vh) translate(0, -50%);}
+    to {transform: translate(-50%, -50%) rotate(405deg) translate(0, -35vh) translate(0, -50%);}
+}
+
+@keyframes rotate-reverse
+{
+    from {transform: translate(-50%, -50%) rotate(405deg) translate(0, -35vh) translate(0, -50%);}
+    to {transform: translate(-50%, -50%) rotate(45deg) translate(0, -35vh) translate(0, -50%);}
+}
+
+div.countdown-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 1s ease-in-out all;
+}
+
+div.container
+{
+    position: relative;
+    width: 10vh;
+    height: 10vh;
+    padding: 6px;
+}
+
+svg.progress
+{
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    transform: rotate(-90deg);
+}
+
+svg.progress circle
+{
+    cx: 5vh;
+    cy: 5vh;
+    r: 2.5vh;
+    fill: none;
+    stroke-width: 5vh;
+}
+
+svg.progress circle.background
+{
+    stroke: #3D3D3D;
+}
+
+svg.progress circle.fill
+{
+    stroke: #C70000;
+    stroke-dasharray: calc(5vh * 3.14); /* --- 2 * pi * r --- */
+    stroke-dashoffset: 50; /* --- dasharray * (100-percent) --- */
+}
+
+svg.progress.blurred
+{
+    filter: blur(2px);
+}
+
+svg.progress.blurred circle
+{
+    fill: rgba(0, 0, 0, 0.5);
+    stroke: rgba(0, 0, 0, 0.25);
+}
+
+div.countdown
+{
+    position: fixed;
+    top: 50%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3.5vh;
+    font-weight: bold;
+}

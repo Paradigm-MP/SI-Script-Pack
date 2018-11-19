@@ -1,0 +1,25 @@
+html
+{
+    user-select: none;
+}
+
+body
+{
+    padding: 0;
+    width: 225px;
+    height: 225px;
+}
+
+div
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: #32C94E;
+    border: 20px solid black;
+    border-radius: 500px;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}

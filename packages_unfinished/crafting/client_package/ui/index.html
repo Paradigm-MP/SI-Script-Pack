@@ -1,0 +1,155 @@
+<html>
+    <title>Crafting</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <div class="tooltip">Tooltip hehehe</div>
+    <body>
+        <div class='background'>
+        </div>
+        <div class='title'>
+            Crafting
+            <span class='x-container'><i id="close-button" class="fa fa-close"></i></span>
+        </div>
+        <div class='main-container'>
+            <div class='rm-container'>Raw Material: 15</div>
+            <div class='left-container'>
+                <div class='container-title'>Getting Started</div>
+                <hr>
+                <div class='info info-size'>
+                    Below, you will find helpful information on how to <b class='decraft-color'>Decraft</b> 
+                    and <b class='craft-color'>Craft</b> items.
+                </div>
+                <div class='container-title small decraft-color'>Decrafting</div>
+                <hr>
+                <div class='info info-size'>
+                    You can decraft items that you don't want into <b>Raw Material</b>.
+                </div>
+                <ol class='info info-size'>
+                    <li><!-- fa-cube for crafted notifications  fa-cubes -->
+                        Click the <b class='decraft-color'>Decraft Items</b> button, under <b>Tools</b>.
+                    </li>
+                    <li>
+                        Select the items that you want to decraft from the inventory window on the left.
+                    </li>
+                    <li>
+                        Items you choose will be removed from your inventory and go into the window 
+                        on the right.
+                    </li>
+                    <li>Once you have selected the items you want to decraft, click <b class='decraft-color'>Decraft</b>. 
+                    </li>
+                    <br>
+                    <div class='info info-size'>
+                        </b>That's it! Your items have now been removed from your inventory and decrafted into 
+                        <b>Raw Material</b>, which is stored in this crafting table.
+                    </div>
+                </ol>
+                <div class='container-title small craft-color'>Basic Crafting</div>
+                <hr>
+                <div class='info info-size'>
+                    You can use <b>Raw Material</b> to craft new items.
+                </div>
+                <ol class='info info-size'>
+                    <li>You can Decraft items into Raw Material. Select the items that you want to Decraft, 
+                        then click the Decraft button. <br><br>These items will be removed from your inventory and 
+                        Raw Material will be added to the Crafting Table.
+                    </li>
+                </ol>
+                <div class='container-title small craft-advanced-color'>Advanced Crafting</div>
+                <hr>
+                <div class='info info-size'>
+                    This section is only recommended for experienced players.
+                    <br><br>
+                    Some items are so complex that they require <b>Raw Material</b> and other items in order to be 
+                    crafted.
+                    <br><br>
+                    
+                </div>
+            </div>
+            <div class='right-container'>
+                <div class='container-title'>Tools</div>
+                <hr>
+                <br>
+                <div class='button decraft selected'>Decraft Items <i class='fa fa-cubes'></i></div>
+                <div class='button craft'>Craft Items <i class='fa fa-cube'></i></div>
+                <br>
+                <hr>
+                
+                <div class='durability-container'>
+                    <svg class='progress blurred' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle class='background'></circle>
+                    </svg>
+                    <svg class='progress' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle class='background'></circle>
+                        <circle class='fill'></circle>
+                    </svg>
+                    <div class='dura-text-container'>
+                        <div class='dura-text-percent'>100%</div>
+                        <div class='dura-text-title'>DURABILITY</div>
+                    </div>
+                </div>
+                <div class='button mode basic selected'>Basic Mode</div>
+                <div class='button mode advanced'>Advanced Mode</div>
+            </div>
+            <div class='middle-container'>
+                <div class='middle decraft'>
+                    <div class='button-middle decraft'>
+                        <i class='fa fa-cubes'></i> Decraft <i class='fa fa-cubes'></i></div>
+                    <div class='inventory-container'>
+                        <div class='items-container-title'>Inventory</div>
+                        <div class='items-container'></div>
+                    </div>
+                    <div class='inventory-decraft-container'>
+                        <div class='items-container-title'>Items to <b class='decraft-color'>Decraft</b></div>
+                        <div class='items-container'></div>
+                    </div>
+                    <i class='fa fa-arrow-right'></i>
+                    <div class='icon'><i class='fa fa-cubes decraft-color'></i></div>
+                </div>
+                <div class='middle craft'>
+                    <div class='inventory-craft-container'>
+                        <div class='items-container-title'>Choose an item to <b class='craft-color'>Craft</b></div>
+                        <div class='items-container'></div>
+                    </div>
+                    <i class='fa fa-arrow-down'></i>
+                    <div class='icon'><i class='fa fa-cube craft-color'></i></div>
+                    <div class='button-middle craft'><i class='fa fa-cube'></i> Craft <i class='fa fa-cube'></i></div>
+                </div>
+                <div class='middle craft-advanced'>
+                    <div class='combiner-view'>
+                        <div class='large-circle'>
+                            <div class='circle-advanced top filled'></div>
+                            <div class='circle-advanced bottom filled'></div>
+                            <div class='circle-advanced left filled'></div>
+                            <div class='circle-advanced right filled'></div>
+                            <div class='circle-advanced topleft filled'></div>
+                            <div class='circle-advanced topright filled'></div>
+                            <div class='circle-advanced bottomleft filled'></div>
+                            <div class='circle-advanced bottomright filled'></div>
+                            <div class='diamond-advanced'></div>
+                        </div>
+                        <div class='large-circle outline-inner'></div>
+                        <div class='large-circle outline-outer'></div>
+                        <div class='button-middle craft-advanced'>
+                                <i class='fa fa-cube'></i> Craft <i class='fa fa-cube'></i>
+                        </div>
+                        <i class='fa fa-arrow-down'></i>
+                    </div>
+                    <div class='inventory-view'>
+                        <div class='inventory-craft-advanced-container'>
+                            <div class='items-container-title'>Select an item to use</div>
+                            <div class='items-container'></div>
+                        </div>
+                    </div>
+                    <div class='button advanced-view combiner selected'>Combiner View</div>
+                    <div class='button advanced-view inventory'>Inventory View</div>
+                    <div class='icon'><i class='fa fa-cube craft-advanced-color'></i></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

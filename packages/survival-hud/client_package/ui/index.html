@@ -1,0 +1,104 @@
+<html>
+    <title>Survival Hud</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="svg.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <body>
+        <div class='main-container'>
+            <div class='section vest hidden'>
+                <div class='percent'></div>
+                <svg class='progress'>
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/vest.svg'></img>
+            </div>
+            <div class='section helmet hidden'>
+                <div class='percent'></div>
+                <svg class='progress'>
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/helmet.svg'></img>
+            </div>
+            <div class='section wingsuit hidden'>
+                <div class='percent'></div>
+                <svg class='progress' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/wingsuit.svg'></img>
+            </div>
+            <div class='section parachute hidden'>
+                <div class='percent'></div>
+                <svg class='progress' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/parachute.svg'></img>
+            </div>
+            <div class='section grapplehook hidden'>
+                <div class='percent'></div>
+                <svg class='progress' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/grapplehook.svg'></img>
+            </div>
+            <div class='section oxygen hidden'>
+                <div class='percent'></div>
+                <svg class='progress' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/oxygen.svg'></img>
+            </div>
+            <div class='section thirst'>
+                <div class='percent'></div>
+                <svg class='progress' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/drop.svg'></img>
+            </div>
+
+            <div class='section hunger'>
+                <div class='percent'></div>
+                <svg class='progress'>
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/apple.svg'></img>
+            </div>
+            <div class='section health'>
+                <div class='percent'>100%</div>
+                <svg class='progress'>
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+                <img class='svg' src='imgs/heart.svg'></img>
+            </div>
+            <div class='section level'>
+                <div class='level'>53</div>
+                <div class='percent'></div>
+                <svg class='progress'>
+                    <circle class='background'></circle>
+                    <circle class='fill'></circle>
+                </svg>
+            </div>
+
+            <div class='toggle'>
+                <div class='arrow right'></div>
+            </div>
+
+        </div>
+        <div class='sz-container'>
+            <span class='sz-title'>In Safezone</span>
+            <span class='sz-subtitle'>You cannot be killed here</span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+    <title>Character Manager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <body>
+        <div class='warning'>
+            <div class='warning-box'>
+                <span class='warning-text'><i class="fa fa-warning"></i> WARNING</span>
+                <br>
+                You cannot change your name after it has been set.
+                Do not include clan tags or anything similar in your name.
+                <br><br>
+                <button class='name-submit back'>
+                    Back
+                </button>
+                <button class='name-submit confirm'>
+                    Confirm
+                </button>
+            </div>
+        </div>
+        <div class="tooltip">
+            Your name does not meet requirements:<br><br>
+            Must be at least 3 characters long.<br>
+            Must be less than 30 characters long.<br>
+            Must contain only characters from your keyboard.<br>
+            Must not be taken by another player.
+        </div>
+        <div class='bg'>
+            <div class='title-area'>
+                <span class='logo'>
+                    <div class='palm-shadow'></div>
+                    <img class="palm" src="./../imgs/palmtreeicon.svg"></img>
+                </span>
+                <div class='title'>
+                    Survival Island
+                </div>
+            </div>
+            <div class='char-area'>
+                <table>
+                    <tr>
+                        <td id='char_1' class='character new'><i id="icon-plus" class="fa fa-plus"></i> Create New Character</td>
+                    </tr>
+                </table>
+            </div>
+            <div class='name-area'>
+                <div class='invalid-name'>
+                    Invalid Name
+                </div>
+                <div class='name-title'>
+                    Character Name
+                </div>
+                <input class='name' type="text" id="name_input" value="">
+                <button class='name-submit disabled confirm-before'>
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

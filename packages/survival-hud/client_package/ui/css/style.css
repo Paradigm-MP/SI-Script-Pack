@@ -1,0 +1,236 @@
+* 
+{
+	user-select: none;
+	font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+html
+{
+    visibility: hidden;
+    overflow: auto;
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+div.main-container
+{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+div.section
+{
+    display: inline-block;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    margin-left: 8px;
+}
+
+div.toggle
+{
+    display: inline-block;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 8px;
+    width: 22.5px;
+    height: 45px;
+    transition: 0.2s linear border;
+}
+
+div.toggle:hover {border: 2px solid rgba(255, 255, 255, 1);}
+
+div.arrow
+{
+    position: absolute;
+    width: 0; 
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.2s ease-in-out border;
+}
+
+div.arrow.left
+{
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent; 
+    border-right: 14px solid white; 
+}
+
+div.arrow.right
+{
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid white;
+}
+
+div.arrow.low-arrow
+{
+    animation: low-arrow 3s infinite linear;
+}
+
+div.section.center
+{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-top: 10px;
+    transform: translateX(-50%);
+}
+
+div.section.level div.level
+{
+    font-size: 28px;
+    top: 22px;
+}
+
+.level-text
+{
+    position: relative;
+    top: 8px;
+    left: 50%;
+    font-size: 12px;
+    transform: translateX(-50%);
+}
+
+.svg
+{
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    width: 23px;
+    height: 23px;
+    transform: translate(-50%,-50%);
+}
+
+.svg path
+{
+    fill: white;
+}
+
+.low path
+{
+    animation: low 3s infinite linear;
+}
+
+@keyframes low 
+{
+    0% { fill: white; }
+    50% { fill: red; }
+    100% { fill: white; }
+}
+
+@keyframes low-arrow
+{
+    0% { border-right-color: white; }
+    50% { border-right-color: red; }
+    100% { border-right-color: white; }
+}
+
+div.section.level .level
+{
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    transform: translateY(-50%);
+}
+
+div.section div.percent
+{
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    font-size: 14px;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+svg.progress
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    transform: rotate(-90deg);
+}
+
+svg.progress circle
+{
+    cx: 22px;
+    cy: 22px;
+    r: 18.75px;
+    fill: none;
+    stroke-width: 4px;
+}
+
+svg.progress circle.background
+{
+    stroke: rgba(0, 0, 0, 0.25);
+}
+
+svg.progress circle.fill
+{
+    stroke: white;
+    stroke-dasharray: 118; /* --- 2 * pi * r --- */
+    stroke-dashoffset: 0; /* --- 157 * (100-percent) --- */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+div.hidden
+{
+    display: none;
+}
+
+
+div.sz-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    text-align: center;
+}
+
+span.sz-title
+{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+span.sz-subtitle
+{
+    display: block;
+    font-size: 14px;
+}

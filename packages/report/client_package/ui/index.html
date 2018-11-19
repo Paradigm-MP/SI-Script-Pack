@@ -1,0 +1,32 @@
+<html>
+    <title>Report Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <div class="window">
+        <div class="title">
+            Report an Issue
+            <div class="close-icon"><i id="close-button" class="fa fa-close"></i></div>
+        </div>
+        <div class="main-body">
+            Please select the type of issue to report<br>
+            <select>
+                <option value="something_not_working" selected="selected">Something isn't working right</option>
+                <option value="stuck">I'm stuck!</option>
+                <option value="exploit/glitch/bug">I found an exploit/glitch/bug</option>
+                <option value="cheating">Someone is cheating</option>
+                <option value="harassing">Someone is harassing me</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br><br>
+            Please provide as many details as possible about the issue<br><br>
+            <textarea placeholder="Type your message here..."></textarea>
+            <button>Submit</button>
+        </div>
+    </div>
+    <div class='received'>
+        Thank you for submitting a report.<br><br>It has been successfully received.
+    </div>
+</html>

@@ -1,0 +1,7 @@
+#window {
+	width: 40%;
+	height: 20%;
+	float: bottom;
+	background-color: purple;
+	position: fixed;
+}

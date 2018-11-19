@@ -1,0 +1,10 @@
+{
+    "author": "Paradigm",
+    "name": "timechange",
+    "version": "1.0.0",
+    "jcmp_dependencies": 
+    [
+        "resource",
+        "load"
+    ]
+}

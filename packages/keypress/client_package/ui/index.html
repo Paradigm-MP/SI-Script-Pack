@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        document.onkeydown = (e) => {
+            jcmp.CallEvent('KeyDown', (typeof e.which === 'number') ? e.which : e.keyCode);
+        };
+        document.onkeypress = (e) => {
+            jcmp.CallEvent('KeyPress', (typeof e.which === 'number') ? e.which : e.keyCode);
+        };
+        document.onkeyup = (e) => {
+            jcmp.CallEvent('KeyUp', (typeof e.which === 'number') ? e.which : e.keyCode);
+        };
+        </script>
+    </body>
+</html>

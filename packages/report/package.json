@@ -1,0 +1,9 @@
+{
+    "author": "Paradigm",
+    "name": "report",
+    "version": "1.0.0",
+    "jcmp_dependencies": 
+    [
+        "resource"
+    ]
+}

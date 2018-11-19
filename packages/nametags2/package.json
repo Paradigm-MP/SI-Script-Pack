@@ -1,0 +1,9 @@
+{
+    "author": "Paradigm",
+    "name": "nametags2",
+    "version": "1.0.0",
+    "jcmp_dependencies": 
+    [
+        "resource"
+    ]
+}

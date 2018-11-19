@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+
+        var seconds = 0;
+        var minutes = 0;
+        setInterval(function() 
+        {
+            seconds++;
+            jcmp.CallEvent('SecondTick', seconds);
+            if (seconds >= 59)
+            {
+                minutes++;
+                jcmp.CallEvent('MinuteTick', minutes);
+                seconds = 0;
+            }
+            if (minutes >= 59)
+            {
+                minutes = 0;
+            }
+        }, 1000);
+
+        jcmp.CallEvent('timechange/loaded');
+        </script>
+    </body>
+</html>

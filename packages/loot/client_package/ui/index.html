@@ -1,0 +1,64 @@
+<html>
+    <title>Loot Window</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <div class="tooltip"></div>
+    <body>
+            <div class='main-container'>
+                <div class='section Loot'>
+                    <span class='section-title'>Loot</span>
+                    <hr class='section'>
+                    <div class='item-container'>
+                    </div>
+                </div>
+                <div class='access-container'>
+                    <div class='access-title'>Access Type</div>
+                    <div class='access-entry selected'><span class='circle onlyme'></span>Only Me</div>
+                    <div class='access-entry'><span class='circle friends'></span>Friends</div>
+                    <div class='access-entry'><span class='circle everyone'></span>Everyone</div>
+                </div>
+                <div class='keypad-container'>
+                    <div class='keypad-title'>Keypad</div>
+                    <div class='keypad-input'></div>
+                    <div class='keypad-number-container'>
+                        <div class='keypad-number'>1</div>
+                        <div class='keypad-number'>2</div>
+                        <div class='keypad-number'>3</div>
+                        <div class='keypad-number'>4</div>
+                        <div class='keypad-number'>5</div>
+                        <div class='keypad-number'>6</div>
+                        <div class='keypad-number'>7</div>
+                        <div class='keypad-number'>8</div>
+                        <div class='keypad-number'>9</div>
+                        <div class='keypad-number'>#</div>
+                        <div class='keypad-number'>0</div>
+                        <div class='keypad-number backspace'><i class='fa fa-arrow-left'></i></div>
+                    </div>
+                    <div class='keypad-enter'>ENTER</div>
+                </div>
+                <div class='upgrade-container'>
+                    <div class='upgrade-title'>Upgrades</div>
+                    <div class='upgrade-entry-container'>
+                        <div class='upgrade-entry'>Storage Upgrade<i class='fa fa-close'></i></div>
+                        <div class='upgrade-entry'>Storage Upgrade<i class='fa fa-close'></i></div>
+                        <div class='upgrade-entry'>Storage Upgrade<i class='fa fa-close'></i></div>
+                        <div class='upgrade-entry'>Storage Upgrade<i class='fa fa-close'></i></div>
+                        <div class='upgrade-entry'>Storage Upgrade<i class='fa fa-close'></i></div>
+                        <div class='upgrade-entry'>Storage Upgrade<i class='fa fa-close'></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class='name-container'>
+                <div class='name-title'>
+                    Storage Name
+                </div>
+                <input class='name' type="text" id="name_input" value="">
+                <button class='name-submit enabled'>
+                    Confirm
+                </button>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <title>Vehicle Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="MY RESOURCE PATH/resources/icons/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="MY RESOURCE PATH/resources/lib/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <div class="tooltip"></div>
+    <div class="window">
+        <div class='main'>
+            <div class="title">
+                <div class="title-text">My Vehicles (0/0)</div>
+                <div class="close-icon"><i id="close-button" class="fa fa-close"></i></div>
+            </div>
+            <div class='entries-container'>
+                <div class='entries-title'>  
+                    <div class='name'>Name</div>
+                    <div class='distance'>Distance</div>
+                    <div class='health'>Health</div>
+                </div>
+                <div class="entries"></div>
+            </div>
+        </div>
+        <div class='transfer'>
+            <div class="close-icon" id="close-button2"><i class="fa fa-close"></i></div>
+            <span class='title'>Transfer Vehicle</span>
+            <span class='description'>You are about to transfer <font id='transfer-name'></font> to another player.
+                This action cannot be undone. Type the player's name EXACTLY as it appears below. If you do not type 
+                the player's name correctly, the vehicle will not be transferred.
+            </span>
+            <span class='transferto'>Transfer To:</span>
+            <input type='text'></input>
+            <span class='confirm'>Confirm</span>
+        </div>
+    </div>
+</html>

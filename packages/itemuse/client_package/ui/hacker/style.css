@@ -1,0 +1,66 @@
+* 
+{
+	user-select: none;
+	font-family: 'Press Start 2P', sans-serif;
+    color: #00ED3B;
+    cursor: default;
+    font-size: 16px;
+}
+
+html
+{
+    visibility: hidden;
+    overflow: auto;
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+div.main-container
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    height: 20vw;
+    min-width: 500px;
+    min-height: 250px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+}
+
+div.inner-container
+{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 6px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+div.input-container
+{
+    height: auto;
+}
+
+div.input
+{
+    display: inline-block;
+    margin-top: 6px;
+    caret-color: transparent;
+    overflow: hidden;
+    max-width: 100%;
+    outline: none;
+    border: 1px solid red;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

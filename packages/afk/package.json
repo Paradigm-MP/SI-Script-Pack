@@ -1,0 +1,10 @@
+{
+    "name": "afk",
+    "version": "1.0.0",
+    "author": "Paradigm",
+    "jcmp_dependencies":
+    [
+        "keypress",
+        "timechange"
+    ]
+}

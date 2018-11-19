@@ -1,0 +1,304 @@
+
+* 
+{
+	user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+html
+{
+    visibility: hidden;
+}
+
+div.window
+{
+    position: fixed;
+    left: calc(50% - 40vh);
+    top: 15%;
+    width: 80vh;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+::-webkit-scrollbar 
+{
+    width: 16px;
+    height: 18px;
+}
+::-webkit-scrollbar-thumb 
+{
+    height: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    background-color: rgba(222, 222, 222, 0.35);
+}
+::-webkit-scrollbar-thumb:hover 
+{
+    height: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    background-color: rgba(222, 222, 222, 0.75);
+}
+::-webkit-scrollbar-button 
+{
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner 
+{
+    background-color: transparent;
+}
+
+div.title
+{
+    position: relative;
+    width: 100%;
+    height: 7%;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(180, 180, 180, 1);
+    color: white;
+    font-weight: bold;
+    font-size: 3.5vh;
+    z-index: 999;
+    vertical-align: middle;
+}
+
+div.title-text
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.title-text:hover
+{
+    cursor: default;
+}
+
+div.players
+{
+    position: absolute;
+    top: 7%;
+    width: 30%;
+    height: 93%;
+    background: rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: 1px solid rgba(180, 180, 180, 1);
+
+}
+
+div.player-entry
+{
+    margin: 0;
+    padding: 10px 5px 10px 5px; /* Top right bottom left */
+    width: auto;
+    text-align: center;
+    font-size: 1.75vh;
+    overflow: hidden;
+    white-space: nowrap;
+	vertical-align: middle;
+    border-right: 0px solid rgba(140, 140, 140, 0.75);
+    transition: border 0.2s linear, background-color 0.2s linear;
+}
+
+div.player-entry:hover
+{
+    border-right: 5px solid rgba(140, 140, 140, 0.75);
+    background: rgba(255, 255, 255, 0.15);
+    cursor: default;
+}
+
+div.player-entry.selected
+{
+    border-right: 5px solid rgba(200, 200, 200, 1);
+    font-weight: bold;
+    cursor: default;
+}
+
+div.message-area
+{
+    position: absolute;
+    top: 13%;
+    left: 30%;
+    height: 80%;
+    width: 70%;
+    border-top: 1px dashed rgba(180, 180, 180, 1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div.message
+{
+    position: relative;
+    margin: 5px;
+    padding: 2px 6px 2px 6px;
+    max-width: 90%;
+    width: fit-content;
+    height: auto;
+    clear: both;
+    user-select: auto;
+    word-wrap: break-word;
+}
+
+div.message:hover
+{
+    cursor: default;
+}
+
+div.message.to
+{
+    float: right;
+    background-color: rgba(19,173,235,0.3);
+}
+
+div.message.from
+{
+    float: left;
+    background-color: rgba(19,235,159,0.3);
+}
+
+div.message-title
+{
+    position: absolute;
+    font-size: 2.25vh;
+    top: 8%;
+    padding-left: 6px;
+    padding-right: 6px;
+    left: 65%;
+    width: fit-content;
+    text-align: center;
+    height: auto;
+    cursor: default;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+input[type=text], select 
+{
+    position: absolute;
+    width: 67%;
+    padding: 6px 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 65%;
+    height: 5%;
+    font-size: 2vh;
+    font-weight: bold;
+    transform: translateX(-50%);
+}
+
+div.mute-icon
+{
+    position: auto;
+    float: left;
+    left: 0;
+    top: 50%;
+    width: 1vh;
+    height: 1vh;
+    font-size: 1vh;
+    margin-left: 0.75vh;
+    margin-top: 1vh;
+}
+
+div.close-icon
+{
+    position: auto;
+    float: right;
+    right: 0;
+    top: 50%;
+    width: 2vh;
+    height: 2vh;
+    font-size: 2vh;
+    margin-right: 0.5vh;
+    margin-top: 0.5vh;
+}
+
+#notification
+{
+    position: fixed;
+    right: 15%;
+    top: 0;
+    margin: 1vh;
+    width: 5vh;
+    height: 5vh;
+    font-size: 2.5vh;
+    animation-name: mail;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+div.mail-notify
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 3vh;
+    text-shadow: 0px 0px 15px gray, 0px 0px 35px gray, 0px 0px 60px white;
+    overflow: hidden;
+}
+
+@keyframes mail {
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.1,1.1);}
+    100% {transform: scale(1,1);}
+}
+
+span.new-messages
+{
+	padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    margin-right: 0.5vh;
+    animation-name: mail-small;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes mail-small {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+div.m-key
+{
+    font-size: 0.75vh;
+    position: fixed;
+    font-weight: bold;
+    padding: 0.3vh;
+    right: 40%;
+    bottom: 40%;
+    background: rgba(230, 230, 230, 1);
+    border-radius: 25px;
+    color: white;
+    box-shadow: inset 0px 0px 5px rgba(160, 160, 160, 1);
+    cursor: default;
+    z-index: 9999;
+}
+
+
+.tag
+{
+    display: inline-block;
+	position: relative;
+    bottom: 2px;
+    font-size: 1.5vh;
+    margin-right: 4px;
+	padding-left: 0.75vh;
+	padding-right: 0.75vh;
+	background-color: gray;
+	border-radius: 50px;
+	color: white;
+	text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
