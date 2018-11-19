@@ -1,7 +1,3 @@
-CURRENTLY ON ITEMUSE
-
-
-
 # FAQ
 
 ## Can I run my own server with these scripts?
