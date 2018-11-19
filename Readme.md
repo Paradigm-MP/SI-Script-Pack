@@ -1,3 +1,6 @@
+# Survival Island Script Pack
+This pack contains all of the scripts that were used on the Survival Island server in Just Cause 3 Multiplayer. For questions, feel free to contact us on our [Discord](https://discord.gg/z9Q8KPJ).
+
 # FAQ
 
 ## Can I run my own server with these scripts?
