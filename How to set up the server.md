@@ -1,5 +1,5 @@
 # How to set up the server
-These steps will guide you in getting the server up and running. If you just try to run it right not, it won't work. You should be well versed in running a JC3MP server and installing packages before continuing. If you do not know how to do these things, please check out the links below:
+These steps will guide you in getting the server up and running. If you just try to run it right now, it won't work. You should be well versed in running a JC3MP server and installing packages before continuing. If you do not know how to do these things, please check out the links below:
 - [How to create a JC3MP server](https://steamcommunity.com/sharedfiles/filedetails/?id=1094953641)
 - [Slightly outdated, but still relevant video guide on setting up a server](https://www.youtube.com/watch?v=ZYX_ixGmrqA&t=0s&index=5&list=PLuIwpfh4OKaX3rzC2S1E7kcS9rU-592VP)
 - [Video guide on how to install packages](https://www.youtube.com/watch?v=bFEyHj8UxII&t=0s&index=4&list=PLuIwpfh4OKaX3rzC2S1E7kcS9rU-592VP)
